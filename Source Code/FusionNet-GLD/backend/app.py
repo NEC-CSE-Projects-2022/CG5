@@ -12,7 +12,7 @@ CORS(app)
 
 MODEL_PATH = "./model/dual_stream_model.h5"
 # replace with your actual Google‑Drive file URL
-GDRIVE_URL = "https://drive.google.com/file/d/1RXtd2FecvDYQV-LOuzLGcxriVO6IRvg2/view?usp=sharing"
+GDRIVE_URL = "https://drive.google.com/uc?id=1RXtd2FecvDYQV-LOuzLGcxriVO6IRvg2"
 CLASS_NAMES = ['Black Rot', 'Esca', 'leaf blight', 'Healthy']
 
 def download_model(drive_url, dest_path):
