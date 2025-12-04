@@ -1,0 +1,9 @@
+body {
+  padding-top: 70px; /* Adjust to your navbar height */
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
