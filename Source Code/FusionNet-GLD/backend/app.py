@@ -4,15 +4,28 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import os
+import gdown
 
 app = Flask(__name__)
 CORS(app)
 
-# ✅ Load Model
-model = tf.keras.models.load_model("./model/dual_stream_model.h5")
-
-# ✅ Class Labels (change if your class names differ)
+MODEL_PATH = "./model/dual_stream_model.h5"
+# replace with your actual Google‑Drive file URL
+GDRIVE_URL = "https://drive.google.com/file/d/1RXtd2FecvDYQV-LOuzLGcxriVO6IRvg2/view?usp=sharing"
 CLASS_NAMES = ['Black Rot', 'Esca', 'leaf blight', 'Healthy']
+
+def download_model(drive_url, dest_path):
+    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+    if not os.path.exists(dest_path):
+        print("Downloading model from Google Drive …")
+        # gdown accepts Google Drive share URLs directly
+        gdown.download(drive_url, dest_path, quiet=False)
+        print("Download complete.")
+
+# ✅ Ensure model present
+download_model(GDRIVE_URL, MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH)
 
 def preprocess_image(image_bytes):
     img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
@@ -35,7 +48,7 @@ def predict():
     confidence = float(np.max(predictions) * 100)
     disease = CLASS_NAMES[class_index]
 
-    response = {
+    return jsonify({
         "disease": disease,
         "confidence": round(confidence, 2),
         "severity": "Moderate" if confidence > 70 else "Low",
@@ -45,9 +58,7 @@ def predict():
             "Remove infected leaves",
             "Monitor regularly"
         ]
-    }
-
-    return jsonify(response)
+    })
 
 @app.route("/")
 def home():
