@@ -1,0 +1,28 @@
+# Ignore large model files
+*.h5
+*.keras
+*.hdf5
+*.pkl
+*.pt
+*.onnx
+
+# Specifically ignore this model
+Source Code/FusionNet-GLD/backend/model/dual_stream_model.h5
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# Node modules
+node_modules/
+
+# React build directories
+build/
+dist/
+
+# Temporary files
+.DS_Store
