@@ -4,8 +4,7 @@ Xception and Inception for Grape Leaf Disease Recognition
 
 
 ## Team Info
-- 22471A05K0 — Syed Shafia Zainab ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
-_Work Done: xxxxxxxxxx_
+- 22471A05K0 — Syed Shafia Zainab ( [LinkedIn](https://linkedin.com/in/shafia2801)
 
 - 22471A05XX — **Name** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
 _Work Done: xxxxxxxxxx_
