@@ -1,9 +1,9 @@
 
-CG5 – FusionNet-GLD: A Dual-Backbone CNN Model Combining
+## CG5 – FusionNet-GLD: A Dual-Backbone CNN Model Combining
 Xception and Inception for Grape Leaf Disease Recognition
 
 
-Team Info
+## Team Info
 - 22471A05K0 — Syed Shafia Zainab 
 
 - 22471A05J7 — Soudagar Min Haz
@@ -12,7 +12,7 @@ Team Info
 
 
 
- Abstract
+## Abstract
 Grapevine leaf diseases like black rot, leaf blight,
 and esca directly impact vineyard productivity through yield
 decline and fruit quality deterioration. Early and precise detection will go a long way in efficient management, but conventional manual inspections are time-consuming, labor-intensive,and tend to be unreliable for commercial vineyards.To solvethese issues, we introduce FusionNet-GLD, a double-backbone convolutional neural network for the classification of grapevine leaf diseases. It combines Xception and InceptionV3 models to take their complementary advantages. Xception extracts fine-grained patterns through depthwise separable convolutions,
@@ -46,7 +46,7 @@ Original conference/IEEE paper used as inspiration for the model.
 
 ---
 
- Our Improvement Over Existing Paper
+## Our Improvement Over Existing Paper
 FusionNet-GLD improves upon existing fusion-based models by combining Xception and InceptionV3 to exploit complementary fine-grained and multi-scale features. The optimized feature-level fusion after global average pooling reduces redundancy and overfitting while improving accuracy and convergence. Compared to single-backbone and earlier fusion approaches, the model achieves higher classification performance with lower computational overhead and better robustness to real-world grape leaf variations.
 
 ---
